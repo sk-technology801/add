@@ -2,6 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/Header";
 import { ThemeProvider } from "@/lib/ThemeContext";
+import Footer from "./components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider> {/* ✅ Wrap everything inside ThemeProvider */}
           <Header />
           {children}
+          <Footer/>
         </ThemeProvider>
       </body>
     </html>
